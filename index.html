@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Rawdha Building Equipment Trading and Rental</title>  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="Resources/css/styles.css">
+  <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+    <!-- Added Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- <div class="container"> -->
+    <nav class="navbar" style=" border: 2px solid white;
+    z-index: 999999;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;">
+        <a class="navbar-brand" href="#">
+          <img src="Resources/Products Images/alrawdha-logo.jpeg" alt="Company Logo" width="100" height="50" class="d-inline-block align-top" style="border-radius: 10px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <br>  <br>
+  <div class="container mt-5">
+  
+    <h1 class="text-center display-5">Welcome to Al Rawdha Building Equipment Trading and Rental</h1>
+    <p style="text-align: justify;">Your One-Stop solution for all your Building Equipment Needs. Buy and rent Hardware, Plumbig Solution, Electric Items, Fastner Item, Safety Items, Solutions, Building Material with FREE delivery all over UAE at very affordable rates!</p>
+    <!-- the install button -->
+    <button id="installButton" class="download-button"><span><i class="fa fa-download"></i> Install Our App</span></button>
+    <div style="text-align: center;">
+      <small class="text-muted">Installable only in updated chrome browsers.</small>
+      </div> 
+      <script>
+let deferredPrompt;
+
+// Function to handle the 'beforeinstallprompt' event
+function handleBeforeInstallPrompt(event) {
+  event.preventDefault();
+  deferredPrompt = event;
+
+  // Show the install button if the app isn't already installed
+  if (!isAppInstalled()) {
+    document.getElementById('installButton').style.display = 'block';
+  }
+}
+
+// Attach event listener for 'beforeinstallprompt' event
+window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+// Handle install button click
+document.getElementById('installButton').addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+
+      // Reset the deferred prompt
+      deferredPrompt = null;
+    });
+  }
+});
+
+// Check if the app is already installed
+function isAppInstalled() {
+  return (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone);
+}
+
+    
+
+      </script>
+
+    <!-- Sliders Started -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Resources/Sliders Images/slider-1.jpeg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="Resources/Sliders Images/slider-2.jpeg" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="Resources/Sliders Images/slider-1.jpeg" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+<!-- Slider Ended -->
+<br>
+    <!-- Products Started -->
+   <h2 class="text-center">Our Featured Products</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card animated-card">
+            <a data-fancybox="gallery1" href="Resources/Products Images/cordless-drill.jpeg">
+                <img src="Resources/Products Images/cordless-drill.jpeg" class="card-img-bottom" alt="cordless">
+              </a>
+              <!-- <a data-fancybox="gallery1" href="Images/cordless-drill-2.png"></a> -->
+              <a data-fancybox="gallery1" href="Resources/Products Images/cordless-drill-3.png"></a>
+          <div class="card-body">
+            <h5 class="card-title">Cordless Drill Machine</h5>
+            <p class="card-text">Powerful and versatile, perfect for digging trenches and foundations.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+         
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card animated-card">
+            <a data-fancybox="gallery2" href="Resources/Products Images/drill-machine.jpeg">
+                <img src="Resources/Products Images/drill-machine.jpeg" class="card-img-bottom" alt="Concrete Mixer">
+              </a>
+              <a data-fancybox="gallery2" href="Resources/Products Images/drill-machine.jpeg"></a>
+          <div class="card-body">
+            <h5 class="card-title">Drill Machine</h5>
+            <p class="card-text">Efficiently mixes concrete for small to medium construction projects.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+        
+        </div>
+      </div>
+      <!-- <div class="col-sm-4">
+        <div class="card animated-card">
+          <div class="card-body">
+            <h5 class="card-title">Scaffolding</h5>
+            <p class="card-text">Provides safe working platforms for construction workers at heights.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+          <a data-fancybox="gallery3" href="scaffolding1.jpg">
+            <img src="scaffolding1.jpg" class="card-img-bottom" alt="Scaffolding">
+          </a>
+          <a data-fancybox="gallery3" href="scaffolding2.jpg"></a>
+        </div>
+      </div> -->
+      <div class="col-sm-4">
+        <div class="card animated-card">
+            <a data-fancybox="gallery4" href="Resources/Products Images/Jack-Hammer.jpeg">
+                <img src="Resources/Products Images/Jack-Hammer.jpeg" class="card-img-bottom" alt="Generator">
+              </a>
+              <a data-fancybox="gallery4" href="Resources/Products Images/Jack-Hammer.jpeg"></a>
+          <div class="card-body">
+            <h5 class="card-title">Jack Hammer</h5>
+            <p class="card-text">Delivers reliable power for various construction equipment and tools.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center;">
+    <a href="products.html">
+      <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-2" style=" border-radius: 30px;">Explore More Products...</button>
+    </a>
+  </div>
+  <!-- Added Features -->
+ 
+  <section class="section">
+    <h2 class="mb-4">Why Choose Al Rawdha</h2>
+    <div class="container">
+        <div class="row">
+         
+            <div class="col-lg-4">
+                <div class="feature">
+                    <div class="icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="title">
+                        Quality Equipment
+                    </div>
+                    <div class="description">
+                        <p>Al Rawdha Building Equipment Trading and Rental provides top-quality equipment for construction projects, ensuring efficiency and safety.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature">
+                    <div class="icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="title">
+                        Affordable Rates
+                    </div>
+                    <div class="description">
+                        <p>We offer competitive rental rates and exceptional customer service, ensuring a hassle-free experience for our clients.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="title">
+                        Reliability & Timeliness
+                    </div>
+                    <div class="description">
+                        <p>With years of industry experience, we guarantee reliability, professionalism, and timely delivery of equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="feature">
+                    <div class="icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="title">
+                        Fast Delivery
+                    </div>
+                    <div class="description">
+                        <p>We ensure fast delivery of equipment to your construction site, minimizing downtime and maximizing productivity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature">
+                    <div class="icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="title">
+                        Excellent Customer Support
+                    </div>
+                    <div class="description">
+                        <p>Our dedicated customer support team is available to assist you with any queries or concerns, ensuring a seamless experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature">
+                    <div class="icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="title">
+                        Trusted Reputation
+                    </div>
+                    <div class="description">
+                        <p>Benefit from our trusted reputation in the industry, backed by numerous satisfied clients and successful projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Added testimonials -->
+
+ <section class="testimonial">
+
+  <div class="container">
+    <h2 class="text-center mb-2">See What Clients Are Saying About Al Rawdha.</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p class="testimonial-text">Al Rawdha Building Equipment Trading and Rental provided us with top-notch equipment and excellent service. They are our go-to choice for all our construction needs.</p>
+                  <p class="testimonial-author">John Doe</p>
+              </div>
+              <div class="carousel-item">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p class="testimonial-text">We are extremely satisfied with the professionalism and reliability of Al Rawdha Building Equipment Trading and Rental. They always deliver on time and exceed our expectations.</p>
+                  <p class="testimonial-author">Jane Smith</p>
+              </div>
+              <div class="carousel-item">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p class="testimonial-text">Al Rawdha Building Equipment Trading and Rental has a wide range of equipment to choose from, and their rates are very competitive. Their customer service is outstanding.</p>
+                  <p class="testimonial-author">Michael Johnson</p>
+              </div>
+              <div class="carousel-item">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p class="testimonial-text">We have been working with Al Rawdha Building Equipment Trading and Rental for years, and they have never disappointed us. Their commitment to quality and customer satisfaction is commendable.</p>
+                  <p class="testimonial-author">Emily Brown</p>
+              </div>
+              <div class="carousel-item">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p class="testimonial-text">I highly recommend Al Rawdha Building Equipment Trading and Rental to anyone in need of reliable equipment and exceptional service. They are the best in the business.</p>
+                  <p class="testimonial-author">David Wilson</p>
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+  </div>
+</section>
+ <!-- Testimonials Ended -->
+
+<!-- Added Map and contact us page -->
+<section class="contact-section">
+  
+  <div class="container">
+    <div class="contact-info">
+      <h3 class="display-3"> <i class="fa-solid fa-address-card"></i> Contact Information</h3>
+      
+      <p> <strong><i class="fa-solid fa-location-dot"></i> Address:</strong><a href="https://maps.app.goo.gl/Mhj7mJr5iozt3YqBA"> Al Rawdha Building Equipment Trading and Rental</a></p>
+      <p><strong> <i class="fa-solid fa-envelope"></i> Email:</strong> <a href="mailto:mailalrawdha@gmail.com">mailalrawdha@gmail.com</a></p>
+      <p><strong> <i class="fa-solid fa-phone-volume"></i> Phone:</strong> <a href="tel:+971569438027">+971 56 943 8027</a></p>
+      <div class="location-heading text-center" > <i class="fa-solid fa-map-location-dot"></i> <strong>Our Location</strong></div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.368118078186!2d55.419052!3d25.2918333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f16e210711d%3A0x8dfd7d247972f994!2sRawdha%20Hardware%20and%20Building%20materials!5e0!3m2!1sen!2s!4v1714974558543!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+      <h2 class="contact-heading">Get in Touch</h2>
+      <div class="contact-container">
+          <div class="contact-form">
+              <!-- Contact form goes here (you can add your form code) -->
+              <p>Feel free to send us a message:</p>
+              <form>
+                  <div class="mb-2">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required placeholder="Enter your name...">
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required placeholder="Enter email...">
+                  </div>
+                  <div class="mb-3">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control" id="message" rows="5" required placeholder="Enter your message..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary"> <i class="fa-regular fa-paper-plane"></i> Send Message</button>
+              </form>
+          </div>
+     
+      </div>
+      <hr>
+      <footer class="text-center">
+        <p>Copyright © Al Rawdha 2024 | Designed and Developed By <a href="https://marketoze.company">Marketoze</a></p>
+      </footer>
+  </div>
+</section>
+
+
+ <!-- WhatsApp button container -->
+    <div class="whatsapp-container" id="whatsapp-container">
+        <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%2C%20Al%20Rawdha%20Building%20Equipment%20Trading%20and%20Rental..." target="_blank" rel="noopener noreferrer">
+            <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+
+    <script>
+        // Wait for the document to fully load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Display the WhatsApp button
+            document.getElementById('whatsapp-container').style.display = 'block';
+        });
+    </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <!-- Bootstrap Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="Resources/js/script.js"></script>
+</body>
+</html>

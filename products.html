@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Al Rawdha Building Equipment Trading and Rental</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="Resources/css/styles.css">
+  <link rel="shortcut icon" href="Resources/Products Images/favicon.jpeg" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+    <!-- Added Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- <div class="container"> -->
+    <nav class="navbar" style=" border: 2px solid white;
+    z-index: 999999;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;">
+        <a class="navbar-brand" href="#">
+          <img src="Resources/Products Images/alrawdha-logo.jpeg" alt="Company Logo" width="100" height="50" class="d-inline-block align-top" style="border-radius: 10px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <br>  <br>
+  <div class="container mt-5">
+  
+    <h1 class="text-center display-5">We Have Quality Products That Our Customers Love</h1>
+    <p>Your One-Stop solution for all your Building Equipment Needs. Buy and rent Hardware, Plumbig Solution, Electric Items, Fastner Item, Safety Items, Solutions, Building Material with FREE delivery all over UAE at very affordable rates!</p>
+    <!-- the install button -->
+    <button id="installButton" class="download-button"><span><i class="fa fa-download"></i> Install App</span></button>
+    <div style="text-align: center;">
+      <small class="text-muted">Installable only in updated chrome browsers.</small>
+      </div> 
+      <script>
+let deferredPrompt;
+
+// Function to handle the 'beforeinstallprompt' event
+function handleBeforeInstallPrompt(event) {
+  event.preventDefault();
+  deferredPrompt = event;
+
+  // Show the install button if the app isn't already installed
+  if (!isAppInstalled()) {
+    document.getElementById('installButton').style.display = 'block';
+  }
+}
+
+// Attach event listener for 'beforeinstallprompt' event
+window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+// Handle install button click
+document.getElementById('installButton').addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+
+      // Reset the deferred prompt
+      deferredPrompt = null;
+    });
+  }
+});
+
+// Check if the app is already installed
+function isAppInstalled() {
+  return (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone);
+}
+
+    
+
+      </script>
+    <!-- Products Started -->
+   <h2 class="text-center">Our Featured Products</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card animated-card">
+            <a data-fancybox="gallery1" href="Resources/Products Images/cordless-drill.jpeg">
+                <img src="Resources/Products Images/cordless-drill.jpeg" class="card-img-bottom" alt="cordless">
+              </a>
+              <!-- <a data-fancybox="gallery1" href="Images/cordless-drill-2.png"></a> -->
+              <a data-fancybox="gallery1" href="Resources/Products Images/cordless-drill-3.png"></a>
+          <div class="card-body">
+            <h5 class="card-title">Cordless Drill Machine</h5>
+            <p class="card-text">Powerful and versatile, perfect for digging trenches and foundations.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+         
+        </div>
+      </div>
+      <!-- Card Started -->
+      <div class="col-sm-4">
+        <div class="card animated-card">
+            <a data-fancybox="gallery2" href="Resources/Products Images/drill-machine.jpeg">
+                <img src="Resources/Products Images/drill-machine.jpeg" class="card-img-bottom" alt="Concrete Mixer">
+              </a>
+              <a data-fancybox="gallery2" href="Resources/Products Images/drill-machine.jpeg"></a>
+          <div class="card-body">
+            <h5 class="card-title">Drill Machine</h5>
+            <p class="card-text">Efficiently mixes concrete for small to medium construction projects.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+        
+        </div>
+      </div>
+    <!-- Card Started -->
+      <div class="col-sm-4">
+        <div class="card animated-card">
+            <a data-fancybox="gallery4" href="Resources/Products Images/Jack-Hammer.jpeg">
+                <img src="Resources/Products Images/Jack-Hammer.jpeg" class="card-img-bottom" alt="Generator">
+              </a>
+              <a data-fancybox="gallery4" href="Resources/Products Images/Jack-Hammer.jpeg"></a>
+          <div class="card-body">
+            <h5 class="card-title">Jack Hammer</h5>
+            <p class="card-text">Delivers reliable power for various construction equipment and tools.</p>
+            <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%20Al%20Rawdha%2C%20I%20need%20details%20about%20your%20products" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Rent or Buy Now</a>
+          </div>
+         
+        </div>
+      </div>
+      <!-- Card Ended -->
+    </div>
+  </div>
+
+  <hr>
+  <footer class="text-center">
+    <p>Copyright © Al Rawdha 2024 | Designed and Developed By <a href="https://marketoze.company">Marketoze</a></p>
+  </footer>
+</div>
+</section>
+
+
+<!-- WhatsApp button container -->
+<div class="whatsapp-container" id="whatsapp-container">
+    <a href="https://api.whatsapp.com/send?phone=971569438027&text=Hi%2C%20Al%20Rawdha%20Building%20Equipment%20Trading%20and%20Rental..." target="_blank" rel="noopener noreferrer">
+        <img src="whatsapp.png" alt="WhatsApp">
+    </a>
+</div>
+
+<script>
+    // Wait for the document to fully load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Display the WhatsApp button
+        document.getElementById('whatsapp-container').style.display = 'block';
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="Resources/js/script.js"></script>
+</body>
+</html>
